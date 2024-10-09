@@ -1,0 +1,13 @@
+.sticker-regular {
+  width: 128px;
+  height: 128px;
+  padding: 11px;
+  background-color: #ffffff;
+}
+
+.sticker-gold {
+  width: 128px;
+  height: 128px;
+  padding: 11px;
+  background-color: #e9d713;
+}

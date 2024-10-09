@@ -1,0 +1,12 @@
+C:\Users\markosusnjar\source\repos\StickerAlbum\Trader.Interfaces\bin\Debug\net8.0\win-x64\Trader.Interfaces.deps.json
+C:\Users\markosusnjar\source\repos\StickerAlbum\Trader.Interfaces\bin\Debug\net8.0\win-x64\Trader.Interfaces.dll
+C:\Users\markosusnjar\source\repos\StickerAlbum\Trader.Interfaces\bin\Debug\net8.0\win-x64\Trader.Interfaces.pdb
+C:\Users\markosusnjar\source\repos\StickerAlbum\Trader.Interfaces\obj\Debug\net8.0\win-x64\Trader.Interfaces.csproj.AssemblyReference.cache
+C:\Users\markosusnjar\source\repos\StickerAlbum\Trader.Interfaces\obj\Debug\net8.0\win-x64\Trader.Interfaces.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\markosusnjar\source\repos\StickerAlbum\Trader.Interfaces\obj\Debug\net8.0\win-x64\Trader.Interfaces.AssemblyInfoInputs.cache
+C:\Users\markosusnjar\source\repos\StickerAlbum\Trader.Interfaces\obj\Debug\net8.0\win-x64\Trader.Interfaces.AssemblyInfo.cs
+C:\Users\markosusnjar\source\repos\StickerAlbum\Trader.Interfaces\obj\Debug\net8.0\win-x64\Trader.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\markosusnjar\source\repos\StickerAlbum\Trader.Interfaces\obj\Debug\net8.0\win-x64\Trader.Interfaces.dll
+C:\Users\markosusnjar\source\repos\StickerAlbum\Trader.Interfaces\obj\Debug\net8.0\win-x64\refint\Trader.Interfaces.dll
+C:\Users\markosusnjar\source\repos\StickerAlbum\Trader.Interfaces\obj\Debug\net8.0\win-x64\Trader.Interfaces.pdb
+C:\Users\markosusnjar\source\repos\StickerAlbum\Trader.Interfaces\obj\Debug\net8.0\win-x64\ref\Trader.Interfaces.dll

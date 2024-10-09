@@ -1,0 +1,27 @@
+.login-container {
+  min-width: 376px;
+  padding: 16px 16px;
+  margin: 16px 0px 16px 16px;
+  border-radius: 8px;
+  background-color: #ebf3fc;
+  align-items: center;
+  position: relative;
+  gap: 8px;
+}
+
+.login-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  margin-bottom: 12px;
+}
+
+.login-content {
+  width: 80%;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.login-button {
+  width: 50%;
+}

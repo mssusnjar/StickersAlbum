@@ -1,0 +1,73 @@
+.album-page {
+  height: 500px;
+  width: 400px;
+  position: relative;
+  background-color: #FCF7E3;
+  border: 2px solid #0078d4;
+}
+
+.album-sticker {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+}
+
+.album-sticker-empty {
+  height: 146px;
+  width: 146px;
+  position: absolute;
+  background-color: #ffffff;
+  border: 2px solid #0078d4;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.album-sticker-number {
+  font-size: 32px;
+  color: #0078d4;
+}
+
+.album-sticker-1 {
+  left: 31px;
+  top: 12px;
+}
+
+.album-sticker-2 {
+  right: 31px;
+  top: 74px;
+}
+
+.album-sticker-3 {
+  left: 31px;
+  top: 175px;
+}
+
+.album-sticker-4 {
+  right: 31px;
+  top: 276px;
+}
+
+.album-sticker-5 {
+  left: 31px;
+  top: 338px;
+}
+
+.album-sticker-new:hover {
+  cursor: pointer;
+  background-color: #ebf3fc;
+}
+
+.stick-text {
+  border-radius: 50%;
+  width: 80px;
+  height: 32px;
+  padding: 8px;
+  font-size: 24px;
+  position: absolute;
+  top: 10px;
+  background: #0078d4;
+  color: #ffffff;
+  text-align: center;
+  display: block;
+}

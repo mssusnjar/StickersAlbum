@@ -1,0 +1,21 @@
+.trade-offer-element-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.trade-offer-element {
+  gap: 16px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.trade-offer-coins {
+  display: flex;
+  align-items: center;
+}
+
+.trade-offer-button {
+  margin: 16px;
+}

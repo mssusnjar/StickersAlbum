@@ -1,0 +1,43 @@
+.album-view-container {
+  width: 100%;
+  padding: 16px 16px;
+  margin: 16px;
+  border-radius: 8px;
+  background-color: #ebf3fc;
+  align-items: center;
+}
+
+.album-view-container-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  margin-bottom: 12px;
+}
+
+.album-view-inner-container {
+  width: 100%;
+  align-items: center;
+}
+
+.album-container {
+  width: 100%;
+  justify-content: center;
+}
+
+.album-cover-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.album-arrow-button:hover {
+  cursor: pointer;
+  color: #0078d4;
+}
+
+.album-cover-front,
+.album-cover-back {
+  height: 500px;
+  width: 400px;
+  border: 2px solid #0078d4;
+}
