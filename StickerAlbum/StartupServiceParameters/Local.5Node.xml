@@ -4,7 +4,7 @@
     <Parameter Name="AuthenticationService_PartitionCount" Value="3" />
     <Parameter Name="AuthenticationService_MinReplicaSetSize" Value="3" />
     <Parameter Name="AuthenticationService_TargetReplicaSetSize" Value="3" />
-    <Parameter Name="TradingService_PartitionCount" Value="1" />
+    <Parameter Name="TradingService_PartitionCount" Value="5" />
     <Parameter Name="TradingService_MinReplicaSetSize" Value="3" />
     <Parameter Name="TradingService_TargetReplicaSetSize" Value="3" />
     <Parameter Name="StickerAlbumFrontend_InstanceCount" Value="1" />

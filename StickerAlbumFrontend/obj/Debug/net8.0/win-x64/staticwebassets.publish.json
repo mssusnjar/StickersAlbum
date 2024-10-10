@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OKapB4OX59KcWVhxDXGdrc/V9Tq0yOFgv1zfJCKtT4I=",
+  "Hash": "mbWDk8oqtvEjv4YXjnN7265PAm3zOiHcfEKkqDokX0k=",
   "Source": "StickerAlbumFrontend",
   "BasePath": "_content/StickerAlbumFrontend",
   "Mode": "Default",
@@ -59,12 +59,12 @@
       "OriginalItemSpec": "C:\\Users\\markosusnjar\\source\\repos\\StickerAlbum\\stickeralbumclientapp\\dist\\assets\\coverFront-BAPcS87k.png"
     },
     {
-      "Identity": "C:\\Users\\markosusnjar\\source\\repos\\StickerAlbum\\stickeralbumclientapp\\dist\\assets\\index-BNTocfoa.js",
+      "Identity": "C:\\Users\\markosusnjar\\source\\repos\\StickerAlbum\\stickeralbumclientapp\\dist\\assets\\index-BRjniboL.css",
       "SourceId": "stickeralbumclientapp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\markosusnjar\\source\\repos\\StickerAlbum\\stickeralbumclientapp\\dist\\",
       "BasePath": "/",
-      "RelativePath": "assets/index-BNTocfoa.js",
+      "RelativePath": "assets/index-BRjniboL.css",
       "AssetKind": "Publish",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -75,15 +75,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\markosusnjar\\source\\repos\\StickerAlbum\\stickeralbumclientapp\\dist\\assets\\index-BNTocfoa.js"
+      "OriginalItemSpec": "C:\\Users\\markosusnjar\\source\\repos\\StickerAlbum\\stickeralbumclientapp\\dist\\assets\\index-BRjniboL.css"
     },
     {
-      "Identity": "C:\\Users\\markosusnjar\\source\\repos\\StickerAlbum\\stickeralbumclientapp\\dist\\assets\\index-Btncll70.css",
+      "Identity": "C:\\Users\\markosusnjar\\source\\repos\\StickerAlbum\\stickeralbumclientapp\\dist\\assets\\index-DrDdlhmU.js",
       "SourceId": "stickeralbumclientapp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\markosusnjar\\source\\repos\\StickerAlbum\\stickeralbumclientapp\\dist\\",
       "BasePath": "/",
-      "RelativePath": "assets/index-Btncll70.css",
+      "RelativePath": "assets/index-DrDdlhmU.js",
       "AssetKind": "Publish",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -94,7 +94,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\markosusnjar\\source\\repos\\StickerAlbum\\stickeralbumclientapp\\dist\\assets\\index-Btncll70.css"
+      "OriginalItemSpec": "C:\\Users\\markosusnjar\\source\\repos\\StickerAlbum\\stickeralbumclientapp\\dist\\assets\\index-DrDdlhmU.js"
     },
     {
       "Identity": "C:\\Users\\markosusnjar\\source\\repos\\StickerAlbum\\stickeralbumclientapp\\dist\\assets\\pack-Dfp1BoQJ.png",

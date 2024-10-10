@@ -59,7 +59,7 @@
 }
 
 .stick-text {
-  border-radius: 50%;
+  border-radius: 16px;
   width: 80px;
   height: 32px;
   padding: 8px;

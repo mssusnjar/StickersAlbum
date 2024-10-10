@@ -10,10 +10,10 @@
 
         internal const int TotalStickers = 80;
 
-        internal const int InitialCoins = 100;
+        internal const int InitialCoins = 60;
 
         internal const int CoinsForPack = 30;
 
-        internal const int MinutesForNewPacks = 2;
+        internal const int MinutesForNewPacks = 360;
     }
 }

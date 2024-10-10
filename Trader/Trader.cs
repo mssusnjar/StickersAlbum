@@ -26,8 +26,8 @@ namespace Trader
         private readonly FabricClient fabricClient;
 
         private const string ReminderName = "WakeUpReminder";
-        private const int tradeIntervalInMinutes = 2;
-        private const int maxIdleIntervalInMinutes = 30;
+        private const int tradeIntervalInMinutes = 15;
+        private const int maxIdleIntervalInMinutes = 60;
 
         public Trader(ActorService actorService, ActorId actorId, FabricClient fabricClient) 
             : base(actorService, actorId)
