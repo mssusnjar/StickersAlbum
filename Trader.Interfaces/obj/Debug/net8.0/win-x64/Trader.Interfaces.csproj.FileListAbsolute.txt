@@ -10,3 +10,4 @@ C:\Users\markosusnjar\source\repos\StickerAlbum\Trader.Interfaces\obj\Debug\net8
 C:\Users\markosusnjar\source\repos\StickerAlbum\Trader.Interfaces\obj\Debug\net8.0\win-x64\refint\Trader.Interfaces.dll
 C:\Users\markosusnjar\source\repos\StickerAlbum\Trader.Interfaces\obj\Debug\net8.0\win-x64\Trader.Interfaces.pdb
 C:\Users\markosusnjar\source\repos\StickerAlbum\Trader.Interfaces\obj\Debug\net8.0\win-x64\ref\Trader.Interfaces.dll
+C:\Users\markosusnjar\source\repos\StickerAlbum\Trader.Interfaces\obj\Debug\net8.0\win-x64\Trader.Interfaces.sourcelink.json

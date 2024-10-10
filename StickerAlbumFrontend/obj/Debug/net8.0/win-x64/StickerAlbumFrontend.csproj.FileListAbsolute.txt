@@ -392,3 +392,4 @@ C:\Users\markosusnjar\source\repos\StickerAlbum\StickerAlbumFrontend\obj\Debug\n
 C:\Users\markosusnjar\source\repos\StickerAlbum\StickerAlbumFrontend\obj\Debug\net8.0\win-x64\StickerAlbumFrontend.pdb
 C:\Users\markosusnjar\source\repos\StickerAlbum\StickerAlbumFrontend\obj\Debug\net8.0\win-x64\StickerAlbumFrontend.genruntimeconfig.cache
 C:\Users\markosusnjar\source\repos\StickerAlbum\StickerAlbumFrontend\obj\Debug\net8.0\win-x64\ref\StickerAlbumFrontend.dll
+C:\Users\markosusnjar\source\repos\StickerAlbum\StickerAlbumFrontend\obj\Debug\net8.0\win-x64\StickerAlbumFrontend.sourcelink.json

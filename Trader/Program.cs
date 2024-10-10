@@ -23,9 +23,10 @@ namespace Trader
                 // The contents of your ServiceManifest.xml and ApplicationManifest.xml files
                 // are automatically populated when you build this project.
                 // For more information, see https://aka.ms/servicefabricactorsplatform
+                var fabricClient = new FabricClient();
 
                 ActorRuntime.RegisterActorAsync<Trader> (
-                   (context, actorType) => new ActorService(context, actorType)).GetAwaiter().GetResult();
+                   (context, actorType) => new ActorService(context, actorType, (service, actorId) => new Trader(service, actorId, fabricClient))).GetAwaiter().GetResult();
 
                 Thread.Sleep(Timeout.Infinite);
             }

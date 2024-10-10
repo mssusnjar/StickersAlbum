@@ -7,6 +7,7 @@ using Player.Interfaces;
 using System.Fabric.Query;
 using System.Fabric;
 using TradingService;
+using Trader.Interfaces;
 
 namespace StickerAlbumFrontend.Controllers
 {

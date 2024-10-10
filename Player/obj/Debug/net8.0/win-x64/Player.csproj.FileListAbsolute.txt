@@ -216,3 +216,4 @@ C:\Users\markosusnjar\source\repos\StickerAlbum\Player\obj\Debug\net8.0\win-x64\
 C:\Users\markosusnjar\source\repos\StickerAlbum\Player\obj\Debug\net8.0\win-x64\Player.pdb
 C:\Users\markosusnjar\source\repos\StickerAlbum\Player\obj\Debug\net8.0\win-x64\Player.genruntimeconfig.cache
 C:\Users\markosusnjar\source\repos\StickerAlbum\Player\obj\Debug\net8.0\win-x64\ref\Player.dll
+C:\Users\markosusnjar\source\repos\StickerAlbum\Player\obj\Debug\net8.0\win-x64\Player.sourcelink.json

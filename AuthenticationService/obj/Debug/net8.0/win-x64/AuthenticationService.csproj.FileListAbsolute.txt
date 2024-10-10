@@ -242,3 +242,4 @@ C:\Users\markosusnjar\source\repos\StickerAlbum\AuthenticationService\obj\Debug\
 C:\Users\markosusnjar\source\repos\StickerAlbum\AuthenticationService\obj\Debug\net8.0\win-x64\AuthenticationService.pdb
 C:\Users\markosusnjar\source\repos\StickerAlbum\AuthenticationService\obj\Debug\net8.0\win-x64\AuthenticationService.genruntimeconfig.cache
 C:\Users\markosusnjar\source\repos\StickerAlbum\AuthenticationService\obj\Debug\net8.0\win-x64\ref\AuthenticationService.dll
+C:\Users\markosusnjar\source\repos\StickerAlbum\AuthenticationService\obj\Debug\net8.0\win-x64\AuthenticationService.sourcelink.json

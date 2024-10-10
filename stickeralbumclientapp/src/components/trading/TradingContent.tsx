@@ -8,8 +8,11 @@ import TradingDialog from "./TradingDialog";
 
 import "./TradingContent.css"
 
-const TradingContent = ({userInfo, updatePlayerInfo} : {userInfo : UserInfoResponse, updatePlayerInfo: () => void}) => {
-
+const TradingContent = ({userInfo, updatePlayerInfo, onSellSticker} : {
+  userInfo : UserInfoResponse,
+  updatePlayerInfo: () => void
+  onSellSticker: (stickerId: number, coins: number) => void}) =>
+{
   const loaderIntervalInMs = 10000;
 
   const [trades, setTrades] = useState<TradeOffer[]>([]);
@@ -79,7 +82,8 @@ const TradingContent = ({userInfo, updatePlayerInfo} : {userInfo : UserInfoRespo
           album={userInfo.album}
           onHoverText="Trade"
           onClick={(stickerIds: number[]) => setDialogStickerId(stickerIds[0])}
-          displayButton={false}
+          singleButton={false}
+          onSecondaryClick={onSellSticker}
         />
       </StackItem>
     </Stack>

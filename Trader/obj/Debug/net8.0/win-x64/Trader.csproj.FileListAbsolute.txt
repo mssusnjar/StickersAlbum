@@ -253,3 +253,4 @@ C:\Users\markosusnjar\source\repos\StickerAlbum\Trader\obj\Debug\net8.0\win-x64\
 C:\Users\markosusnjar\source\repos\StickerAlbum\Trader\obj\Debug\net8.0\win-x64\Trader.pdb
 C:\Users\markosusnjar\source\repos\StickerAlbum\Trader\obj\Debug\net8.0\win-x64\Trader.genruntimeconfig.cache
 C:\Users\markosusnjar\source\repos\StickerAlbum\Trader\obj\Debug\net8.0\win-x64\ref\Trader.dll
+C:\Users\markosusnjar\source\repos\StickerAlbum\Trader\obj\Debug\net8.0\win-x64\Trader.sourcelink.json

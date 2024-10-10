@@ -26,7 +26,7 @@ namespace Trader
         private readonly FabricClient fabricClient;
 
         private const string ReminderName = "WakeUpReminder";
-        private const int tradeIntervalInMinutes = 5;
+        private const int tradeIntervalInMinutes = 2;
         private const int maxIdleIntervalInMinutes = 30;
 
         public Trader(ActorService actorService, ActorId actorId, FabricClient fabricClient) 
@@ -39,9 +39,9 @@ namespace Trader
         {
             ActorEventSource.Current.ActorMessage(this, $"Trader actor {Id} activated.");
 
-            tradeTimer = RegisterTimer(PerformTradeCallback, null, TimeSpan.Zero, TimeSpan.FromMinutes(tradeIntervalInMinutes));
+            tradeTimer = RegisterTimer(PerformTradeCallback, null, TimeSpan.FromMinutes(tradeIntervalInMinutes), TimeSpan.FromMinutes(tradeIntervalInMinutes));
 
-            await RegisterReminderAsync(ReminderName, null, TimeSpan.Zero, TimeSpan.FromMinutes(maxIdleIntervalInMinutes));
+            await RegisterReminderAsync(ReminderName, null, TimeSpan.FromMinutes(maxIdleIntervalInMinutes), TimeSpan.FromMinutes(maxIdleIntervalInMinutes));
         }
 
         protected override Task OnDeactivateAsync()
@@ -82,7 +82,7 @@ namespace Trader
             var trades = await tradingService.GetActiveTrades(cancellationToken);
             var trade = trades[random.Next(trades.Count)];
 
-            if (trade != null && string.IsNullOrEmpty(trade.DateCompleted) && trade.Coins <= 5)
+            if (trade != null && string.IsNullOrEmpty(trade.DateCompleted) && trade.Coins >= -5)
             {
                 var ownerPlayer = ActorProxy.Create<IPlayer>(new ActorId(trade.PlayerId), "fabric:/StickerAlbum");
                 await ownerPlayer.TradeStickers(null, trade.WantedStickerId, Math.Max(-trade.Coins, 0), cancellationToken);

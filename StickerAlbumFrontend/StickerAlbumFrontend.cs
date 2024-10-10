@@ -5,6 +5,7 @@ using Microsoft.ServiceFabric.Actors.Client;
 using Microsoft.ServiceFabric.Actors;
 using System.Fabric;
 using Trader.Interfaces;
+using Microsoft.Extensions.Logging;
 
 namespace StickerAlbumFrontend
 {
@@ -62,6 +63,20 @@ namespace StickerAlbumFrontend
                         return app;
                     }))
             };
+        }
+
+        protected override async Task RunAsync(CancellationToken cancellationToken)
+        {
+            try
+            {
+                var traderActor = ActorProxy.Create<ITrader>(new ActorId("trader"), "fabric:/StickerAlbum");
+                await traderActor.WakeUp();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
         }
     }
 }

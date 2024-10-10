@@ -3,7 +3,7 @@ import { Pivot, PivotItem } from "@fluentui/react";
 import MainContent from '../main/MainContent';
 import TradingContent from '../trading/TradingContent';
 import { defaultUserInfo, UserInfoResponse } from '../../services/AuthenticationService';
-import { addStickersToAlbum, buyPacks, getUserInfo, openPacks } from '../../services/PlayerActorService';
+import { addStickersToAlbum, buyPacks, getUserInfo, openPacks, sellSticker } from '../../services/PlayerActorService';
 
 import './App.css'
 
@@ -12,7 +12,10 @@ const App = () => {
 
   const getPlayerInfo = (username: string) => {
     if (!username) return;
-    getUserInfo(username).then((userInfo : UserInfoResponse) => {setUserInfo({...userInfo})})
+    getUserInfo(username).then((userInfo : UserInfoResponse) => {
+      if (userInfo.newPacksDateTime === "") setTimeout(() => getPlayerInfo(username), 500);
+      else setUserInfo({...userInfo})
+    })
   }
 
   const openPlayerPacks = (packsCount: number) => {
@@ -30,6 +33,11 @@ const App = () => {
     addStickersToAlbum(userInfo.username, stickerIds).then(() => getPlayerInfo(userInfo.username));
   }
 
+  const onSellSticker = (stickerId: number, coins: number) => {
+    if (!userInfo.username) return;
+    sellSticker(userInfo.username, stickerId, coins).then(() => getPlayerInfo(userInfo.username));
+  }
+
   return <>
     <Pivot className="pivot-header" styles={{link: {width: "49.5%"}}}>
       <PivotItem headerText="Album">
@@ -45,6 +53,7 @@ const App = () => {
         <TradingContent
           userInfo={userInfo}
           updatePlayerInfo={() => getPlayerInfo(userInfo.username)}
+          onSellSticker={onSellSticker}
         />
       </PivotItem>
     </Pivot>

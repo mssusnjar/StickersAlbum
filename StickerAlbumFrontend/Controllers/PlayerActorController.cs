@@ -96,5 +96,25 @@ namespace StickerAlbumFrontend.Controllers
 
             return Ok(response);
         }
+
+        [HttpPut("{username}/sell")]
+        public async Task<IActionResult> SellSticker(string username, [FromBody] SellStickerRequestBody body, CancellationToken cancellationToken)
+        {
+            logger.LogInformation("SellSticker - Sending request to sell a sticker for player with username {username}", username);
+
+            var player = ActorProxy.Create<IPlayer>(new ActorId(username), "fabric:/StickerAlbum");
+            var response = await player.TradeStickers(body.StickerId, null, body.Coins, cancellationToken);
+
+            if (!response)
+            {
+                logger.LogInformation("SellSticker - Failed to sell a sticker for player with username {username}", username);
+            }
+            else
+            {
+                logger.LogInformation("SellSticker - successfully executed for player with username {username}", username);
+            }
+
+            return Ok(response);
+        }
     }
 }

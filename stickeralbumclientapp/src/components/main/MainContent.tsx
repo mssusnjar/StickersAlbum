@@ -60,7 +60,8 @@ const MainContent = ({userInfo, getPlayerInfo, onOpenPacks, onAddStickers, onBuy
         album={userInfo.album}
         onHoverText="Stick!"
         onClick={onStickerInPileClick}
-        displayButton={true} />
+        singleButton={true}
+        onSecondaryClick={() => {}} />
     </StackItem>
   </Stack>
 }

@@ -40,7 +40,7 @@ export async function buyPacks(username: string, count: number): Promise<Respons
     });
 
     return response;
-  }
+}
 
 export async function addStickersToAlbum(username: string, stickerIds: number[]): Promise<Response> {
 
@@ -53,4 +53,17 @@ export async function addStickersToAlbum(username: string, stickerIds: number[])
   });
 
   return response;
+}
+
+export async function sellSticker(username: string, stickerId: number, coins: number): Promise<Response> {
+
+    let response = await fetch(urlJoin(baseUrl, `${username}/sell`), {
+        method: "PUT",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({StickerId: stickerId, Coins: coins})
+    });
+
+    return response;
 }
