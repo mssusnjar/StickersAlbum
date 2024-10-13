@@ -30,13 +30,16 @@ namespace Player
         {
             ActorEventSource.Current.ActorMessage(this, $"Player actor {Id} activated.");
 
-            await StateManager.TryAddStateAsync(PlayerStateKey, new PlayerState()
+            var newActor = await StateManager.TryAddStateAsync(PlayerStateKey, new PlayerState()
             {
                 Username = Id.ToString(),
                 Coins = PlayerConstants.InitialCoins
             });
 
-            await RegisterReminderAsync(ReminderName, null, TimeSpan.Zero, TimeSpan.FromMinutes(PlayerConstants.MinutesForNewPacks));
+            if (newActor)
+            {
+                await RegisterReminderAsync(ReminderName, null, TimeSpan.Zero, TimeSpan.FromMinutes(PlayerConstants.MinutesForNewPacks));
+            }
         }
 
         public async Task ReceiveReminderAsync(string reminderName, byte[] state, TimeSpan dueTime, TimeSpan period)
