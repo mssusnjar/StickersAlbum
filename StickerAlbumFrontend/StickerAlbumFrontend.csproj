@@ -11,6 +11,8 @@
 	<SpaRoot>..\stickeralbumclientapp</SpaRoot>
 	<SpaProxyLaunchCommand>npm run dev</SpaProxyLaunchCommand>
 	<SpaProxyServerUrl>https://localhost:86</SpaProxyServerUrl>
+	<ApplicationInsightsResourceId>/subscriptions/3ac99ca9-179c-44c9-a40c-7015499be153/resourceGroups/SF-Onboarding/providers/microsoft.insights/components/stickers-album-ai</ApplicationInsightsResourceId>
+	<UserSecretsId>07c760a5-9e45-411d-bc9d-27639657abe5</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,6 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.22.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights.ServiceFabric.Native" Version="2.3.1" />
     <PackageReference Include="Microsoft.AspNetCore.SpaProxy" Version="8.0.8" />
     <PackageReference Include="Microsoft.ServiceFabric.Actors" Version="7.1.2338" />
     <PackageReference Include="Microsoft.ServiceFabric.AspNetCore.Kestrel" Version="7.1.2338" />

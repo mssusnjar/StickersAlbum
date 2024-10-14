@@ -1,10 +1,13 @@
-using System.Fabric;
+using Microsoft.ApplicationInsights.Channel;
+using Microsoft.ApplicationInsights.Extensibility;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.ServiceFabric.Data;
 using Microsoft.ServiceFabric.Data.Collections;
 using Microsoft.ServiceFabric.Services.Communication.Runtime;
 using Microsoft.ServiceFabric.Services.Remoting.Runtime;
 using Microsoft.ServiceFabric.Services.Runtime;
+using System.Fabric;
 
 namespace AuthenticationService
 {
@@ -15,7 +18,22 @@ namespace AuthenticationService
         public AuthenticationService(StatefulServiceContext context)
             : base(context)
         {
-            logger = new LoggerFactory().CreateLogger<AuthenticationService>();
+            var configPackage = FabricRuntime.GetActivationContext().GetConfigurationPackageObject("Config");
+            var appInsightsConnectionString = configPackage.Settings.Sections["Secrets"].Parameters["AppInsightsConnectionString"].Value;
+
+            var services = new ServiceCollection();
+
+            services.Configure<TelemetryConfiguration>(config => config.TelemetryChannel = new InMemoryChannel());
+            services.AddLogging(builder =>
+            {
+                builder.AddApplicationInsights(
+                    configureTelemetryConfiguration: (config) => config.ConnectionString = appInsightsConnectionString,
+                    configureApplicationInsightsLoggerOptions: (options) => { }
+                );
+            });
+
+            var serviceProvider = services.BuildServiceProvider();
+            logger = serviceProvider.GetRequiredService<ILogger<AuthenticationService>>();
         }
 
         protected override IEnumerable<ServiceReplicaListener> CreateServiceReplicaListeners()

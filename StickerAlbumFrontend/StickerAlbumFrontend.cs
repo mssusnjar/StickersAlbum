@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Logging.ApplicationInsights;
 using Microsoft.ServiceFabric.Services.Communication.AspNetCore;
 using Microsoft.ServiceFabric.Services.Communication.Runtime;
 using Microsoft.ServiceFabric.Services.Runtime;
@@ -5,7 +6,6 @@ using Microsoft.ServiceFabric.Actors.Client;
 using Microsoft.ServiceFabric.Actors;
 using System.Fabric;
 using Trader.Interfaces;
-using Microsoft.Extensions.Logging;
 
 namespace StickerAlbumFrontend
 {
@@ -31,11 +31,17 @@ namespace StickerAlbumFrontend
                     {
                         ServiceEventSource.Current.ServiceMessage(serviceContext, $"Starting Kestrel on {url}");
 
+                        var appInsightsConnectionString = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ApplicationInsights")["ConnectionString"];
                         var builder = WebApplication.CreateBuilder();
 
                         builder.Services.AddSingleton(serviceContext);
                         builder.Services.AddSingleton<FabricClient>();
                         builder.Services.AddSingleton(new HttpClient());
+
+                        builder.Logging.AddApplicationInsights(
+                            configureTelemetryConfiguration: (config) => config.ConnectionString = appInsightsConnectionString,
+                            configureApplicationInsightsLoggerOptions: (options) => { });
+                        builder.Logging.AddFilter<ApplicationInsightsLoggerProvider>("stickers-album-traces", LogLevel.Trace);
 
                         builder.WebHost
                                     .UseKestrel()
